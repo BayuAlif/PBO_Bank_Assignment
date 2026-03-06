@@ -9,6 +9,7 @@ package com.mycompany.encapsulation_pbo;
  * @author bayu
  */
 public class BankAccount {
+
     private String name;
     private int balance;
     private String accountNumber;
@@ -32,7 +33,7 @@ public class BankAccount {
         this.typeAccount = typeAccount;
         this.status = true;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -52,4 +53,40 @@ public class BankAccount {
     public String getTypeAccount() {
         return typeAccount;
     }
+    //setter
+
+    public void setName(String name) {
+        if (name.length() > 3) {
+            this.name = name;
+        }
+    }
+
+    //method untuk menambah saldo
+    public void setBalance(int total) {
+        if (total > 0) {
+            balance += total;
+        }
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public void setTypeAccount(String typeAccount) {
+        if (typeAccount.equals("Regular") || typeAccount.equals("Premium")) {
+            this.typeAccount = typeAccount;
+        }
+    }
+
+    public void reduceBalance(int total) {
+        if (total > 0 && total <= balance) {
+            balance -= total;
+        }
+
+    }
+
 }
