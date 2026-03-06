@@ -32,4 +32,24 @@ public class BankAccount {
         this.typeAccount = typeAccount;
         this.status = true;
     }
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public boolean getStatus() {
+        return status;
+    }
+
+    public String getTypeAccount() {
+        return typeAccount;
+    }
 }
